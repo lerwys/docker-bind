@@ -6,7 +6,7 @@ MAINTAINER pstauffer@confirm.ch
 # Install all required dependencies.
 #
 
-RUN echo "nameserver 10.0.0.71" > /etc/resolv.conf && \
+RUN echo "nameserver 10.0.0.71" >> /etc/resolv.conf && \
     apk --update upgrade && \
     apk add --update bind && \
     rm -rf /var/cache/apk/*
